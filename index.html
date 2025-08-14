@@ -43,11 +43,6 @@
                 <h1>Hello, I'm <span class="highlight" style="color: rgb(0, 251, 255);">Z6DEV</span></h1>
                 <img src="assets/Jakuta.png" id="pfp" alt="Z6DEV Profile Picture" width="128" height="128" style="border-radius: 10px;" />
                 <p class="mt-3">Just a 13-year-old programmer who loves to code, create, and make unconventional things.</p>
-                <div class="d-flex justify-content-center">
-                    <div id="quotes" class="p-3" style="background: linear-gradient(to right, #001f3f, #00509e); width: 50%;">
-                        <!-- Insert text -->
-                    </div>
-                </div>
                 <a href="#projects" class="btn btn-outline-light mt-4">See My Work</a>
             </div>
         </section>
@@ -121,28 +116,8 @@
             ], {
                 duration: 700,
                 iterations: 1
-            });
-            
+            }); 
         });
-        
-        // Quotes util code
-        
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        
-        fetch("https://www.jsonkeeper.com/b/0XG7Z")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            
-            return response.json()
-        }).then(text => {
-            document.getElementById("quotes").textContent = `"${text[getRandomInt(0, text.length-1)]}"`
-        })
     </script>
 </body>
 </html>
