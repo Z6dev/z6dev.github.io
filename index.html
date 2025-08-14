@@ -107,16 +107,18 @@
         
         const btn = document.getElementById('pfp');
         btn.addEventListener('click', () => {
-            btn.animate([
-            { offset: 0, transform: 'translateY(0)' },
-            { offset: 0.3, transform: 'translateY(-40px)', easing: 'ease-out' },
-            { offset: 0.6, transform: 'translateY(0)' },
-            { offset: 0.8, transform: 'translateY(-15px)', easing: 'ease-in' },
-            { offset: 1, transform: 'translateY(0)' }
-            ], {
-                duration: 700,
-                iterations: 1
-            }); 
+            btn.animate(
+            [
+            { transform: 'scale(1)' },   // start
+            { transform: 'scale(1.2)' }, // end
+            ],
+            {
+                duration: 300, // in ms
+                iterations: 8,
+                direction: 'alternate',
+                easing: 'ease-in-out'
+            }
+            );
         });
     </script>
 </body>
