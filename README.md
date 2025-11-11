@@ -4,4 +4,4 @@
 
 **Check out my Website!**  
 just go open the website and See whatever lies in that catastrophe, plz:  
-[The Website](https://z6dev.github.io)  
+[The Website](https://z6dev.netlify.app)  
